@@ -16,9 +16,9 @@ import org.testng.annotations.Parameters;
 public class BrowserBaseClass {
     static WebDriver driver;
     
-    @BeforeTest(groups = {"regression"})
+    
     @Parameters({"browser"})
-    void openApp(@Optional("chrome") String value) {
+    void openApp(String value) {
         Map<String, Object> prefs = new HashMap<String, Object>();
         
         // Add key and value to map as follows to switch off browser notification
@@ -43,7 +43,7 @@ public class BrowserBaseClass {
         driver.manage().window().maximize();
     }
     
-    @AfterTest(groups = {"regression"})
+    
     void quit() {
         if (driver != null) {
             driver.quit();
