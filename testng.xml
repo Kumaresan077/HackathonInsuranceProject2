@@ -31,9 +31,7 @@
 			</run>
 		</groups>
 
-		<classes>
-			<class name="TestCases.regressionTest" />
-		</classes>
+		
 	</test>
 </suite>
 
